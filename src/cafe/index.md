@@ -81,8 +81,8 @@ onMounted(async () => {
                 <a class="title" target="_blank">{{ repo.name }}</a>
                 <p class="details" v-if="repo.description">{{ repo.description }}</p>
                 <div v-if="repo.lastCommit" class="commit-info">
-                    <small style="color: var(--vp-c-text-3)">{{ repo.lastCommit }}</small>
-                    <small v-if="repo.committer" style="margin-left: 5px;color: var(--vp-c-gutter)">by {{ repo.committer }}</small>
+                    <small style="color: var(--vp-c-text-3); opacity: .8; margin-right: 5px; margin-top: 4px;">{{ repo.lastCommit }}
+                    <span v-if="repo.committer" style="color: var(--vp-c-gutter)">by {{ repo.committer }}</span></small>
                 </div>
                 <div v-else>
                     <small style="color: var(--vp-c-gutter)">No commits yet</small>
@@ -97,9 +97,9 @@ onMounted(async () => {
 
 <style scoped>
 div.items {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    column-count: auto;
+    column-gap: 10px;
+    column-width: 350px;
 }
 a.project img.icon {
     margin-bottom: 20px;
@@ -108,6 +108,8 @@ a.project img.icon {
     border-radius: var(--vp-border-radius-2);
 }
 a.project {
+    break-inside: avoid;
+    margin-bottom: 10px;
     height: 100%;
     padding: 24px;
     border-radius: var(--vp-border-radius-1);

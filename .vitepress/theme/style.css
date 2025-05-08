@@ -214,3 +214,13 @@ h5,
 h6 {
   font-family: var(--vp-font-family-mono);
 }
+
+/**
+ * Element: small
+ * -------------------------------------------------------------------------- */
+
+small {
+  display: inline-block;
+  line-height: 1.4 !important;
+  vertical-align: middle;
+}

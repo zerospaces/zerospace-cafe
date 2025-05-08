@@ -65,7 +65,7 @@ onMounted(async () => {
 <div v-else class="items">
     <div v-for="member in members" :key="member.id" class="item">
         <a :href="member.profile" class="project">
-            <img class="icon" :src="member.avatar" />
+            <img class="icon" :src="`https://wsrv.nl/?url=${member.avatar}`" />
         <a class="title" target="_blank">{{ member.name }}</a>
             <p class="details" v-if="member.bio">{{ member.bio }}</p>
             <div v-else>
@@ -77,9 +77,9 @@ onMounted(async () => {
 
 <style scoped>
 .items {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    column-count: auto;
+    column-gap: 10px;
+    column-width: 350px;
 }
 
 a.project img.icon {
@@ -90,8 +90,9 @@ a.project img.icon {
 }
 
 a.project {
-    height: 100%;
+    break-inside: avoid;
     padding: 24px;
+    margin-bottom: 10px;
     border-radius: var(--vp-border-radius-1);
     background-color: var(--vp-c-bg-soft);
     border: 1px solid var(--vp-c-divider);
