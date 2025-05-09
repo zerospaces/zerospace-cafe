@@ -14,8 +14,8 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     logo: "https://wsrv.nl/?url=avatars.githubusercontent.com/u/208816776?s=250&v=4&mask=circle",
     nav: [
-      { text: "Home", link: "/" },
-      { text: "Café", link: "/src/cafe" },
+      { text: "Diary", link: "/src/cafe/diary" },
+      { text: "Projects", link: "/src/cafe" },
       { text: "Contributors", link: "/src/cafe/contributors" },
     ],
     search: {
