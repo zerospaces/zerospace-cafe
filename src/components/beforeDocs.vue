@@ -7,7 +7,12 @@
         :src="`${frontmatter.image}`"
       />
       <p class="time">Published on {{ formatDate(frontmatter.date) }}</p>
-      <h1 class="title">{{ frontmatter.title }}</h1>
+      <h1 class="title">
+        {{ frontmatter.title
+        }}<sup v-if="frontmatter.lang != 'en-US'"
+          ><badge v-if="frontmatter.lang">{{ frontmatter.lang }}</badge></sup
+        >
+      </h1>
       <p class="desc">{{ frontmatter.desc }}</p>
       <div class="author-info" v-if="frontmatter.author">
         <img
@@ -23,6 +28,19 @@
         >
           {{ authorData.name || frontmatter.author }}
         </a>
+      </div>
+      <div v-if="frontmatter.translator" class="translator">
+        <blockquote
+          style="
+            margin-top: 20px;
+            background-color: var(--vp-c-bg-alt);
+            border: 1px solid var(--vp-c-divider);
+            border-radius:var(--vp-border-radius-2);
+            padding: 10px 15px 10px 15px;
+          "
+        >
+          This page has been translated by <strong>{{ frontmatter.translator }}</strong>, please be cautious when reading.
+        </blockquote>
       </div>
     </div>
   </div>
@@ -85,7 +103,6 @@ function formatDate(raw) {
 </script>
 
 <style scoped>
-
 .author-info {
   display: flex;
   align-items: center;

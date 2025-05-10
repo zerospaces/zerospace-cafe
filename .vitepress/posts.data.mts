@@ -7,6 +7,7 @@ interface Post {
   desc: string
   date: string
   author: string
+  lang: string
   relativeDate: string
 }
 
@@ -23,6 +24,7 @@ export default createContentLoader("/src/diary/**/*.md", {
         image: frontmatter.image,
         desc: frontmatter.desc,
         date: frontmatter.date,
+        lang: frontmatter.lang || 'en-US',
         author: frontmatter.author,
         relativeDate: formatRelativeDate(frontmatter.date)
       }))

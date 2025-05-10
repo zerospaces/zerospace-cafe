@@ -100,7 +100,15 @@ onMounted(async () => {
       <a :href="article.url" class="diary">
         <img v-if="article.image" class="image" :src="`${article.image}`" />
         <div class="textPlace">
-          <a class="title">{{ article.title }}</a>
+          <a class="title"
+            >{{ article.title
+            }}<sup
+              class="language"
+              v-if="article.lang != 'en-US'"
+              style="font-size: 12px; line-height: 12px; margin-left: 6px"
+              >{{ article.lang }}</sup
+            ></a
+          >
           <p class="details">{{ article.desc }}</p>
 
           <div class="author-info">
@@ -131,13 +139,14 @@ onMounted(async () => {
 
 <style scoped>
 .items {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 10px;
+  column-count: auto;
+  column-gap: 10px;
+  column-width: 350px;
 }
 
 .diary {
   break-inside: avoid;
+  margin-bottom: 10px;
   border-radius: var(--vp-border-radius-1);
   background-color: var(--vp-c-bg-soft);
   border: 1px solid var(--vp-c-divider);

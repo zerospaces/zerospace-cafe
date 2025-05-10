@@ -15,7 +15,7 @@ export default defineConfig({
     logo: "https://wsrv.nl/?url=avatars.githubusercontent.com/u/208816776?s=250&v=4&mask=circle",
     nav: [
       { text: "Diary", link: "/src/cafe/diary" },
-      { text: "Projects", link: "/src/cafe" },
+      { text: "Projects", link: "/src/cafe/projects" },
       { text: "Contributors", link: "/src/cafe/contributors" },
     ],
     search: {

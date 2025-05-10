@@ -16,9 +16,10 @@
 
   /* Border Radius */
   --vp-border-radius-1: 20px;  /* 1.25rem */
-  --vp-border-radius-2: 12px;   /* 0.75rem */
-  --vp-border-radius-3: 7.2px;  /* 0.45rem */
-  --vp-border-radius-4: 4.32px; /* 0.27rem */
+  --vp-border-radius-2: 16px;  /* 1rem */
+  --vp-border-radius-3: 12px;   /* 0.75rem */
+  --vp-border-radius-4: 7.2px;  /* 0.45rem */
+  --vp-border-radius-5: 4.32px; /* 0.27rem */
 
 }
 
@@ -174,7 +175,7 @@ button.DocSearch.DocSearch-Button {
  * -------------------------------------------------------------------------- */
 
 a.VPButton {
-  border-radius: var(--vp-border-radius-2) !important;
+  border-radius: var(--vp-border-radius-3) !important;
 }
 
 a.VPButton.medium.alt {

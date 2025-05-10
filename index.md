@@ -9,11 +9,11 @@ hero:
     src: "https://wsrv.nl/?url=avatars.githubusercontent.com/u/208816776&v=4&mask=circle&w=300"
   actions:
     - theme: brand
-      text: Projects
-      link: /src/cafe
-    - theme: alt
       text: Diary
       link: /src/cafe/diary
+    - theme: alt
+      text: Projects
+      link: /src/cafe/projects
     - theme: alt
       text: Contributors
       link: /src/cafe/contributors
