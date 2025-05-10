@@ -10,7 +10,7 @@ on:
 
   # Hourly rebuild
   schedule:
-    - cron: "0 * * * *"
+    - cron: "20 * * * *"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
