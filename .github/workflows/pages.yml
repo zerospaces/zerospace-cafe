@@ -8,10 +8,6 @@ on:
   push:
     branches: [main]
 
-  # Hourly rebuild
-  schedule:
-    - cron: "20 * * * *"
-
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
     inputs:
@@ -45,8 +41,6 @@ jobs:
         with:
           version: 9 # Not needed if you've set "packageManager" in package.json
       # - uses: oven-sh/setup-bun@v1 # Uncomment this if you're using Bun
-      - name: Pull diaries
-        run: git clone https://github.com/zerospaces/cafe-diaries.git ./src/diary --depth 1
       - name: Setup Node
         uses: actions/setup-node@v4
         with:

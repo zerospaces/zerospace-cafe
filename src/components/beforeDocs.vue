@@ -8,10 +8,7 @@
       />
       <p class="time">Published on {{ formatDate(frontmatter.date) }}</p>
       <h1 class="title">
-        {{ frontmatter.title
-        }}<sup v-if="frontmatter.lang != 'en-US'"
-          ><badge v-if="frontmatter.lang">{{ frontmatter.lang }}</badge></sup
-        >
+        {{ frontmatter.title }}
       </h1>
       <p class="desc">{{ frontmatter.desc }}</p>
       <div class="author-info" v-if="frontmatter.author">
@@ -163,6 +160,7 @@ div.vp-doc.layout.beforeDocs {
     margin: 7px 0 0 0;
     color: var(--vp-c-text-3);
     font-weight: 500;
+    line-height: 24px;
   }
 }
 </style>

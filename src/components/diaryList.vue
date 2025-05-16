@@ -102,12 +102,7 @@ onMounted(async () => {
         <div class="textPlace">
           <a class="title"
             >{{ article.title
-            }}<sup
-              class="language"
-              v-if="article.lang != 'en-US'"
-              style="font-size: 12px; line-height: 12px; margin-left: 6px"
-              >{{ article.lang }}</sup
-            ></a
+            }}</a
           >
           <p class="details">{{ article.desc }}</p>
 
@@ -178,7 +173,7 @@ onMounted(async () => {
   color: var(--vp-c-text-1);
   font-family: var(--vp-font-family-mono);
   font-size: 22px;
-  line-height: 22px;
+  line-height: 28px;
   font-weight: 600;
   margin: 0;
 }
@@ -186,6 +181,7 @@ onMounted(async () => {
 .details {
   color: var(--vp-c-text-2);
   font-size: 14px;
+  line-height: 20px;
   margin: 8px 0 0 0;
 }
 
